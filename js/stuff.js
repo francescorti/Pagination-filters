@@ -2,8 +2,11 @@
 
 // Solution 1: use the brilliant plugin on listjs.com, see http://listjs.com/docs/ for usage examples
 
-// added .list to ul and #student-list to container div in index.html
+// add search field
 
+$(".page-header").append('<div class="student-search"><input id="search-field" placeholder="Search for students..." type="text" class="search"><button id="reset-button-id">Reset</button></div>');
+
+// parameters for list.js plugin
 
 var monkeyList = new List('student-list', {
   valueNames: ['name','email'],
@@ -11,9 +14,10 @@ var monkeyList = new List('student-list', {
   pagination: true
 });
 
+
 // Problem 2: add a search bar to let users search the list of students for a particular student or students
 
-// Solution 2: list.js plugin includes a search function, all I have to do is add <input placeholder="Search for students..." type="text" class="search"> in index.html
+// Solution 2: list.js plugin includes a search function, all I have to do is dinamically add it to index.html
 
 // Extra credit: add message when there's no search result
 
